@@ -66,7 +66,7 @@ const CafeProfile = () => {
           </View>
         </View>
         
-        {/* Book a Table */}
+      
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Book a Table</Text>
           <View style={styles.bookingDetails}>
@@ -81,21 +81,20 @@ const CafeProfile = () => {
     <View style={styles.sectionContainer}>
         <Text style={styles.sectionTitle}>Café Vibe</Text>
         <View style={styles.vibeContainer}>
-          {/* Left column - Labels */}
+    
           <View style={styles.vibeLabelsColumn}>
             <Text style={styles.vibeLabel}>Music playing</Text>
             <Text style={styles.vibeLabel}>Today's special</Text>
             <Text style={styles.vibeLabel}>Noise level</Text>
           </View>
-          
-          {/* Middle column - Values */}
+         
           <View style={styles.vibeValuesColumn}>
             <Text style={styles.vibeValue}>Acoustic Chill</Text>
             <Text style={styles.vibeValue}>Avocado Toast</Text>
             <Text style={styles.vibeValue}>Moderate</Text>
           </View>
           
-          {/* Right column - Cat with message */}
+     
           <View style={styles.catMessageContainer}>
             <Image
               source={require('../assets/images/cat.png')}
@@ -212,7 +211,8 @@ const styles = StyleSheet.create({
   },
   sectionContainer: {
     paddingHorizontal: 16,
-    marginBottom: 20,
+      marginBottom: 20,
+   
   },
   sectionTitle: {
     fontSize: 18,
@@ -222,7 +222,10 @@ const styles = StyleSheet.create({
   bookingDetails: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+      justifyContent: 'space-between',
+      backgroundColor: '#fff',
+      padding: 16,
+    borderRadius: 10,
   },
   dateContainer: {
     flexDirection: 'row',
