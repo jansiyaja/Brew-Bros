@@ -31,7 +31,7 @@ const CafeProfile = () => {
           <Text style={styles.cafeName}>Brewed Awakenings</Text>
         </View>
         
-        {/* Cafe Image */}
+    
         <View style={styles.cafeImageContainer}>
           <Image 
             source={require('../assets/images/cafe.jpeg')} 
@@ -39,8 +39,7 @@ const CafeProfile = () => {
             resizeMode="cover"
           />
         </View>
-        
-        {/* Menu and Order Section */}
+
         <View style={styles.menuOrderContainer}>
           <Text style={styles.menuText}>Menu</Text>
           <TouchableOpacity style={styles.orderButton}>
@@ -48,8 +47,8 @@ const CafeProfile = () => {
           </TouchableOpacity>
         </View>
         
-        {/* Amenities */}
-        <View style={styles.amenitiesContainer}>
+        
+        <View style={styles.utilitiesContainer}>
           <View style={styles.amenityItem}>
             <Ionicons name="wifi" size={20} color="#777" />
             <Text style={styles.amenityText}>Free Wi-Fi</Text>
@@ -66,7 +65,7 @@ const CafeProfile = () => {
           </View>
         </View>
         
-        {/* Book a Table */}
+       
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Book a Table</Text>
           <View style={styles.bookingDetails}>
@@ -78,7 +77,7 @@ const CafeProfile = () => {
           </View>
         </View>
         
-        {/* Cafe Vibe */}
+    
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Café Vibe</Text>
           <View style={styles.vibeContainer}>
@@ -111,7 +110,7 @@ const CafeProfile = () => {
           </View>
         </View>
         
-        {/* Hop Crowd */}
+ 
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Hop Crowd</Text>
           <Text style={styles.crowdText}>12 Hoppers Present</Text>
@@ -156,9 +155,11 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   cafeName: {
-    fontSize: 28,
+    fontSize: 36,
     fontWeight: 'bold',
     color: '#000',
+      marginLeft: 10,
+      fontFamily: 'SpaceMono-Regular',
   },
   cafeImageContainer: {
     width: '100%',
@@ -192,7 +193,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: '600',
   },
-  amenitiesContainer: {
+  utilitiesContainer: {
     flexDirection: 'row',
     paddingHorizontal: 16,
     marginBottom: 20,
