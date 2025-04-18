@@ -9,14 +9,14 @@ import {
   SafeAreaView,
   ScrollView
 } from 'react-native';
-import { Ionicons, MaterialCommunityIcons, FontAwesome5, FontAwesome } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons, FontAwesome5 } from '@expo/vector-icons';
 
 const CafeProfile = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" />
       
-   
+      {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton}>
           <Ionicons name="chevron-back" size={24} color="black" />
@@ -26,7 +26,7 @@ const CafeProfile = () => {
       </View>
       
       <ScrollView showsVerticalScrollIndicator={false}>
-       
+        {/* Cafe Name */}
         <View style={styles.cafeNameContainer}>
           <Text style={styles.cafeName}>Brewed Awakenings</Text>
         </View>
@@ -39,8 +39,8 @@ const CafeProfile = () => {
             resizeMode="cover"
           />
         </View>
-        
-        {/* Menu and Order Section */}
+
+        {/* Menu and Order Button */}
         <View style={styles.menuOrderContainer}>
           <Text style={styles.menuText}>Menu</Text>
           <TouchableOpacity style={styles.orderButton}>
@@ -48,25 +48,25 @@ const CafeProfile = () => {
           </TouchableOpacity>
         </View>
         
-        {/* Amenities */}
-        <View style={styles.amenitiesContainer}>
-          <View style={styles.amenityItem}>
-            <Ionicons name="wifi" size={20} color="#777" />
-            <Text style={styles.amenityText}>Free Wi-Fi</Text>
+        {/* Utilities */}
+        <View style={styles.utilitiesContainer}>
+          <View style={styles.utilitiesItem}>
+            <Ionicons name="wifi" size={22} color="#777" />
+            <Text style={styles.utilitiesText}>Free Wi-Fi</Text>
           </View>
           
-          <View style={styles.amenityItem}>
-            <MaterialCommunityIcons name="volume-off" size={20} color="#777" />
-            <Text style={styles.amenityText}>Quiet Zone</Text>
+          <View style={styles.utilitiesItem}>
+            <MaterialCommunityIcons name="volume-off" size={22} color="#777" />
+            <Text style={styles.utilitiesText}>Quiet Zone</Text>
           </View>
           
-          <View style={styles.amenityItem}>
-            <FontAwesome5 name="charging-station" size={20} color="#777" />
-            <Text style={styles.amenityText}>CC</Text>
+          <View style={styles.utilitiesItem}>
+            <FontAwesome5 name="charging-station" size={22} color="#777" />
+            <Text style={styles.utilitiesText}>CC</Text>
           </View>
         </View>
         
-        {/* Book a Table */}
+      
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Book a Table</Text>
           <View style={styles.bookingDetails}>
@@ -78,38 +78,36 @@ const CafeProfile = () => {
           </View>
         </View>
         
-        {/* Cafe Vibe */}
-        <View style={styles.sectionContainer}>
-          <Text style={styles.sectionTitle}>Café Vibe</Text>
-          <View style={styles.vibeContainer}>
-            <View style={styles.vibeColumn}>
-              <View style={styles.vibeItem}>
-                <Text style={styles.vibeLabel}>Music playing</Text>
-                <Text style={styles.vibeValue}>Acoustic Chill</Text>
-              </View>
-              <View style={styles.vibeItem}>
-                <Text style={styles.vibeLabel}>Today's special</Text>
-                <Text style={styles.vibeValue}>Avocado Toast</Text>
-              </View>
-              <View style={styles.vibeItem}>
-                <Text style={styles.vibeLabel}>Noise level</Text>
-                <Text style={styles.vibeValue}>Moderate</Text>
-              </View>
-            </View>
-            
-            <View style={styles.vibeMessageContainer}>
-              <Image
-                source={require('../assets/images/cat.png')}
-                style={styles.catIcon}
-              />
-              <View style={styles.messageBox}>
-                <Text style={styles.messageText}>
-                  The perfect spot for a cozy conversation!
-                </Text>
-              </View>
+    <View style={styles.sectionContainer}>
+        <Text style={styles.sectionTitle}>Café Vibe</Text>
+        <View style={styles.vibeContainer}>
+    
+          <View style={styles.vibeLabelsColumn}>
+            <Text style={styles.vibeLabel}>Music playing</Text>
+            <Text style={styles.vibeLabel}>Today's special</Text>
+            <Text style={styles.vibeLabel}>Noise level</Text>
+          </View>
+         
+          <View style={styles.vibeValuesColumn}>
+            <Text style={styles.vibeValue}>Acoustic Chill</Text>
+            <Text style={styles.vibeValue}>Avocado Toast</Text>
+            <Text style={styles.vibeValue}>Moderate</Text>
+          </View>
+          
+     
+          <View style={styles.catMessageContainer}>
+            <Image
+              source={require('../assets/images/cat.png')}
+              style={styles.catIcon}
+            />
+            <View style={styles.messageBox}>
+              <Text style={styles.messageText}>
+                The perfect spot for a cozy conversation!
+              </Text>
             </View>
           </View>
         </View>
+      </View>
         
         {/* Hop Crowd */}
         <View style={styles.sectionContainer}>
@@ -127,26 +125,26 @@ const CafeProfile = () => {
 export default CafeProfile;
 
 const styles = StyleSheet.create({
-  container: {
+    container: {
+      paddingTop:10,
     flex: 1,
-        backgroundColor: '#F9F5EA',
-    
+    backgroundColor: '#F9F5EA',
   },
-    header: {
-      margin:12,
+  header: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 16,
-    paddingVertical: 10,
+      paddingVertical: 10,
+    margin:5
   },
   backButton: {
-    padding: 5,
+    padding: 10,
   },
-    headerTitle: {
-      margin:5,
-    fontSize: 20,
-    fontWeight: '600',
+  headerTitle: {
+    fontSize: 18,
+    fontWeight: '500',
+    textAlign: 'center',
   },
   emptySpace: {
     width: 24,
@@ -156,9 +154,10 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   cafeName: {
-    fontSize: 28,
+    fontSize: 32,
     fontWeight: 'bold',
     color: '#000',
+    fontFamily: 'SpaceMono-Regular', // Make sure this font is loaded
   },
   cafeImageContainer: {
     width: '100%',
@@ -179,7 +178,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   menuText: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   orderButton: {
@@ -192,27 +191,28 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: '600',
   },
-  amenitiesContainer: {
+  utilitiesContainer: {
     flexDirection: 'row',
     paddingHorizontal: 16,
     marginBottom: 20,
+    justifyContent: 'space-between',
   },
-  amenityItem: {
+  utilitiesItem: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'white',
     paddingVertical: 8,
     paddingHorizontal: 12,
     borderRadius: 20,
-    marginRight: 10,
   },
-  amenityText: {
+  utilitiesText: {
     marginLeft: 6,
     color: '#444',
   },
   sectionContainer: {
     paddingHorizontal: 16,
-    marginBottom: 20,
+      marginBottom: 20,
+   
   },
   sectionTitle: {
     fontSize: 18,
@@ -222,7 +222,10 @@ const styles = StyleSheet.create({
   bookingDetails: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+      justifyContent: 'space-between',
+      backgroundColor: '#fff',
+      padding: 16,
+    borderRadius: 10,
   },
   dateContainer: {
     flexDirection: 'row',
@@ -233,56 +236,63 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     color: '#444',
   },
-  vibeContainer: {
+vibeContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  vibeColumn: {
-    flex: 1,
+  vibeLabelsColumn: {
+    flex: 0.4,
+    justifyContent: 'space-between',
   },
-  vibeItem: {
-    marginBottom: 8,
+  vibeValuesColumn: {
+    flex: 0.6,
+
+    justifyContent: 'space-between',
   },
   vibeLabel: {
-    fontSize: 13,
+    fontSize: 14,
     color: '#777',
+    marginBottom: 14,
   },
   vibeValue: {
-    fontSize: 15,
-    color: '#333',
+    fontSize: 14,
+    fontWeight: '500',
+    color: '#000',
+    marginBottom: 14,
   },
-  vibeMessageContainer: {
+  catMessageContainer: {
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'flex-end',
   },
   catIcon: {
     width: 40,
     height: 40,
-    marginRight: 5,
+    marginBottom: 4,
   },
   messageBox: {
     backgroundColor: 'white',
     padding: 10,
     borderRadius: 12,
-    flex: 1,
+    maxWidth: '100%',
   },
   messageText: {
-    fontSize: 13,
+    fontSize: 12,
+    color: '#333',
   },
   crowdText: {
     fontSize: 15,
     marginBottom: 8,
+    color: '#444',
   },
   progressBarContainer: {
     height: 10,
-    backgroundColor: '#E0E0E0',
+    backgroundColor: '#FFDDC1', // Lighter orange for the background
     borderRadius: 5,
     overflow: 'hidden',
   },
   progressBar: {
     width: '60%',
     height: '100%',
-    backgroundColor: '#FF9F5F',
+    backgroundColor: '#FF9F5F', // Same orange as the order button
   },
 });
