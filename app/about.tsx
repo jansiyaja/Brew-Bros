@@ -126,7 +126,8 @@ const CafeProfile = () => {
 export default CafeProfile;
 
 const styles = StyleSheet.create({
-  container: {
+    container: {
+      paddingTop:10,
     flex: 1,
     backgroundColor: '#F9F5EA',
   },
@@ -135,13 +136,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 16,
-    paddingVertical: 10,
+      paddingVertical: 10,
+    margin:5
   },
   backButton: {
-    padding: 5,
+    padding: 10,
   },
   headerTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '500',
     textAlign: 'center',
   },
