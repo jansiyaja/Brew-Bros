@@ -13,7 +13,8 @@ type ProductCardProps = {
 
 
 const ProductCard = ({ image, title, price, tag, isSpecial }:ProductCardProps) => {
-  return (
+    return (
+      
     <View style={styles.productCard}>
       <Image source={image} style={styles.productImage} />
       <View style={styles.productInfo}>
@@ -44,13 +45,15 @@ export default ProductCard;
 const styles = StyleSheet.create({
  productCard: {
         width: '48%',
-    
+        borderRadius: 12,
+    overflow: 'hidden',
+    backgroundColor: '#FFF',
+
   },
-    productImage: {
-      
+   productImage: {
     width: '100%',
     height: 120,
-    borderRadius: 8,
+    resizeMode: 'cover',
   },
   productInfo: {
     marginTop: 5,
@@ -79,7 +82,7 @@ const styles = StyleSheet.create({
   },
   tagText: {
     fontSize: 12,
-    color: 'green',
+    color: '#38A169'
   },
   priceAddContainer: {
     flexDirection: 'row',
@@ -106,7 +109,8 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
     secondproductRow: {
-    marginTop:10,
+        marginTop: 10,
+   
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 15,

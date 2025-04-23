@@ -11,9 +11,9 @@ import ViewOrderButton from '@/components/Cafe/ViewOrderButton';
 export default function BrewBrosCafe() {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" />
+       <StatusBar barStyle="dark-content" backgroundColor="#FFAE78" />
       <Header />
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollcontainer}>
 
         <Category/>
         <View style={styles.productsContainer}>
@@ -38,7 +38,11 @@ export default function BrewBrosCafe() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fff'
+  },
+  scrollcontainer: {
+    flex: 1,
+    backgroundColor: '#FFAE78'
   },
 
   productsContainer: {

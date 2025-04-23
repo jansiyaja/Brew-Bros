@@ -6,7 +6,7 @@ type PromoBannerProps = {
   text: string;
 };
 
-const PromoBanner: React.FC<PromoBannerProps> = ({ image, text }) => {
+const PromoBanner: React.FC<PromoBannerProps> = ({ image, text  }) => {
   return (
       <View style={styles.banner}>
           
@@ -20,7 +20,7 @@ export default PromoBanner;
 
 const styles = StyleSheet.create({
   banner: {
-   backgroundColor: '#FFE8D6',
+      backgroundColor: '#FFE9CC',
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
