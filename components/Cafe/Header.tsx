@@ -42,8 +42,7 @@ export default Header;
 const styles = StyleSheet.create({
   safeArea: {
     backgroundColor: '#ffa94d',
-    borderBottomLeftRadius: 24,
-    borderBottomRightRadius: 24,
+
     paddingBottom: 16,
   },
   headerRow: {

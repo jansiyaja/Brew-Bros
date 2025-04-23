@@ -16,7 +16,7 @@ const CafeProfile = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" />
       
-      {/* Header */}
+
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton}>
           <Ionicons name="chevron-back" size={24} color="black" />
@@ -26,12 +26,12 @@ const CafeProfile = () => {
       </View>
       
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* Cafe Name */}
+       
         <View style={styles.cafeNameContainer}>
           <Text style={styles.cafeName}>Brewed Awakenings</Text>
         </View>
         
-        {/* Cafe Image */}
+      
         <View style={styles.cafeImageContainer}>
           <Image 
             source={require('../assets/images/cafe.jpeg')} 
@@ -40,7 +40,7 @@ const CafeProfile = () => {
           />
         </View>
 
-        {/* Menu and Order Button */}
+   
         <View style={styles.menuOrderContainer}>
           <Text style={styles.menuText}>Menu</Text>
           <TouchableOpacity style={styles.orderButton}>
@@ -109,7 +109,7 @@ const CafeProfile = () => {
         </View>
       </View>
         
-        {/* Hop Crowd */}
+
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Hop Crowd</Text>
           <Text style={styles.crowdText}>12 Hoppers Present</Text>

@@ -11,7 +11,7 @@ type ProductCardProps = {
 };
 
 
-// Product Card Component
+
 const ProductCard = ({ image, title, price, tag, isSpecial }:ProductCardProps) => {
   return (
     <View style={styles.productCard}>
@@ -43,7 +43,8 @@ export default ProductCard;
 
 const styles = StyleSheet.create({
  productCard: {
-    width: '48%',
+        width: '48%',
+    
   },
     productImage: {
       

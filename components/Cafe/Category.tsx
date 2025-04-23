@@ -35,8 +35,11 @@ const Category = () => {
 export default Category;
 
 const styles = StyleSheet.create({
- categoryContainer: {
-    paddingVertical: 8,
+    categoryContainer: {
+    backgroundColor:'#fff',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingVertical: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#f0f0f0',
   },

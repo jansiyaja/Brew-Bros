@@ -23,9 +23,12 @@ export default function BrewBrosCafe() {
             text="Add a dessert and earn 10 Hop Coins!" 
           />
           <SecondProductRow />
+
+           
         </View>
       </ScrollView>
-      <ViewOrderButton/>
+           <ViewOrderButton/>
+
     </SafeAreaView>
   );
 }
@@ -40,6 +43,8 @@ const styles = StyleSheet.create({
 
   productsContainer: {
     padding: 10,
+    backgroundColor: '#fff',
+      
   },
 
   
